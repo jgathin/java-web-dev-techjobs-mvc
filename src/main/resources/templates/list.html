@@ -19,8 +19,18 @@
             </tr>
             <tr>
                 <!-- TODO #2: Complete the View Jobs By Category Table. -->
+<!--                <td>-->
+<!--                    <ul>-->
+<!--                        <li>-->
+<!--                            <a th:href="@{/list/jobs(column=all, value=All)}" th:text ="All"></a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </td>-->
 
-                <td></td> <!-- Feel free to remove or modify this element if necessary. -->
+<!--                <td>-->
+<!--                    <a th:href="@{/list/jobs}" th:text="All Jobs"></a>-->
+<!--                </td> &lt;!&ndash; Feel free to remove or modify this element if necessary. &ndash;&gt;-->
+
 
                 <td th:each="category : ${tableChoices}">
                     <ul>
@@ -33,4 +43,5 @@
         </table>
 
     </body>
+
 </html>
