@@ -1,6 +1,15 @@
+.search-header {
+font-family: Verdana;
+}
+
 .body-content {
     margin-top: 72px;
 }
+
+.body-content li {
+    font-size: 20px;
+}
+
 
 td, th {
     padding: 10px;
@@ -22,19 +31,26 @@ tr:nth-child(odd) {
     margin-left: auto;
     margin-right: auto;
 }
+table.job-listing td, th {
+    border: 1px solid #ddd;
+}
 
 table.job-listing {
     margin: 30px auto;
-    border: 1px solid #e4e4e4;
+    border: 2px solid #e4e4e4;
     width: 80%;
 }
 
 table.job-listing td:first-child {
     font-weight: bold;
+    color: navy;
+    text-align: center;
 }
 
 table.job-listing td:last-child {
     width: 80%;
+    font-family: Optima, sans-serif;
+    font-size: 18px;
 }
 
 label {
@@ -43,4 +59,8 @@ label {
 
 .centered {
     text-align: center;
+}
+
+.id-alter {
+font-weight: bold;
 }

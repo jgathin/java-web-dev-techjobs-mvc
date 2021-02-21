@@ -11,7 +11,7 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <form th:action="@{/search/results}" method = "post">
-        <h2>Search by:</h2>
+        <h2 class = "search-header">Search by:</h2>
 
         <p>
             <span th:each="column : ${columns}">
@@ -37,6 +37,43 @@
     <hr />
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
+
+    <table class = "job-listing" th:each = "job : ${jobs}">
+        <tr>
+            <td>ID</td>
+            <td class = "id-alter" th:text = "${job.id}"></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td th:text = "${job.name}"></td>
+        </tr>
+        <tr>
+            <td>Employer</td>
+            <td> <a th:href = "@{'/list/jobs?column=employer&value=' + ${job.employer}}"
+                    th:text = "${job.employer}"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td> <a th:href = "@{'/list/jobs?column=location&value=' + ${job.location}}"
+                   th:text = "${job.location}"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>Position Type</td>
+            <td> <a th:href = "@{'/list/jobs?column=positionType&value=' + ${job.positionType}}"
+                   th:text = "${job.positionType}"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>Skill</td>
+            <td> <a th:href = "@{'/list/jobs?column=coreCompetency&value=' + ${job.coreCompetency}}"
+                    th:text = "${job.coreCompetency}"></a>
+
+            </td>
+
+        </tr>
+    </table>
 
 </div>
 
